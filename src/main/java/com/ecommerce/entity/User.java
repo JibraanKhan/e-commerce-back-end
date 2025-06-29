@@ -1,7 +1,6 @@
 package com.ecommerce.entity;
 
-import java.math.BigDecimal;
-
+import jakarta.persistence.Column;
 import jakarta.persistence.Entity;
 import jakarta.persistence.GeneratedValue;
 import jakarta.persistence.GenerationType;
@@ -15,17 +14,20 @@ import lombok.NoArgsConstructor;
 @Data
 @AllArgsConstructor
 @NoArgsConstructor
-@Table(name="products")
-public class Product {
+@Table(name="users")
+public class User {
 	@Id
 	@GeneratedValue(strategy=GenerationType.IDENTITY)
-	private Long product_id;
+	private Long userId;
 	
-	private String product_name;
-	private String product_description;
+	private String username;
 	
-	private BigDecimal product_price;
+	@Column(name = "password_hash")
+	private String passwordHash;
+	
+	@Column(name = "first_name")
+	private String firstName;
+	
+	@Column(name = "last_name")
+	private String lastName;
 }
-
-//curl -o .gitignore https://raw.githubusercontent.com/github/gitignore/main/Java.gitignore
-
