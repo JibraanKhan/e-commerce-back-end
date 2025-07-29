@@ -1,6 +1,6 @@
 # E-Commerce Clothing Website
 
-Welcome! This is a sample e-commerce website for browsing and purchasing clothing items.
+Welcome! This is the backend of a sample e-commerce website for browsing and purchasing clothing items.
 
 ## Tech Stack
 
